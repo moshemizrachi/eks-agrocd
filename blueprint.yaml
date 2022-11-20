@@ -4,7 +4,7 @@ description: Cloudify Helm-eks blueprint. Creates EKS cluster and installs helm 
 
 imports:
   - https://cloudify.co/spec/cloudify/6.3.0/types.yaml
-  - plugin:cloudify-helm-plugin
+  - plugin:cloudify-helm-plugin?version=0.2.5
   - plugin:cloudify-kubernetes-plugin
   - plugin:cloudify-utilities-plugin
 
