@@ -27,6 +27,10 @@ inputs:
 
   eks_cluster_name:
     type: string
+  
+  kubernetes_version:
+    type: string
+    default: 1.22
 
   eks_cluster_name:
     type: string
@@ -70,6 +74,7 @@ node_templates:
           id: { get_input: infra_deployment_id }
           inputs:
             eks_cluster_name: { get_input: eks_cluster_name }
+            kubernetes_version: { get_input: kubernetes_version}  
             aws_region_name: 'us-west-1'
             availability_zone_1: 'us-west-1a'
             availability_zone_2: 'us-west-1c'
